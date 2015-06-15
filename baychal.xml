@@ -1,36 +1,36 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="34" inline="false" x="32" y="35">
+  <block type="controls_whileUntil" id="1" inline="false" x="32" y="35">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="101">
+      <block type="sensor_button" id="2">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="controls_whileUntil" id="360" inline="false">
+      <block type="controls_whileUntil" id="3" inline="false">
         <field name="MODE">WHILE</field>
         <value name="NUMBER">
-          <block type="logic_operation" id="420" inline="true">
+          <block type="logic_operation" id="4" inline="true">
             <field name="OP">LAND</field>
             <value name="A">
-              <block type="logic_compare" id="367" inline="true">
+              <block type="logic_compare" id="5" inline="true">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block type="sensor_object" id="390">
+                  <block type="sensor_object" id="6">
                     <field name="OBJECT">LEFTSIDE</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="math_number" id="397">
+                  <block type="math_number" id="7">
                     <field name="NUM">100</field>
                   </block>
                 </value>
               </block>
             </value>
             <value name="B">
-              <block type="logic_negate" id="427" inline="true">
+              <block type="logic_negate" id="8" inline="true">
                 <value name="NUMBER">
-                  <block type="sensor_button" id="434">
+                  <block type="sensor_button" id="9">
                     <field name="OBJECT">ENTER</field>
                   </block>
                 </value>
@@ -39,91 +39,91 @@
           </block>
         </value>
         <statement name="DO">
-          <block type="oled_cleardisplay" id="137">
+          <block type="oled_cleardisplay" id="10">
             <next>
-              <block type="oled_setcursor" id="186" inline="true">
+              <block type="oled_setcursor" id="11" inline="true">
                 <value name="STARTX">
-                  <block type="math_number" id="202">
+                  <block type="math_number" id="12">
                     <field name="NUM">10</field>
                   </block>
                 </value>
                 <value name="STARTY">
-                  <block type="math_number" id="209">
+                  <block type="math_number" id="13">
                     <field name="NUM">10</field>
                   </block>
                 </value>
                 <next>
-                  <block type="oled_drawnumber" id="247" inline="true">
+                  <block type="oled_drawnumber" id="14" inline="true">
                     <value name="NUMBER">
-                      <block type="sensor_object" id="254">
+                      <block type="sensor_object" id="15">
                         <field name="OBJECT">LEFTSIDE</field>
                       </block>
                     </value>
                     <next>
-                      <block type="oled_setcursor" id="263" inline="true">
+                      <block type="oled_setcursor" id="16" inline="true">
                         <value name="STARTX">
-                          <block type="math_number" id="270">
+                          <block type="math_number" id="17">
                             <field name="NUM">100</field>
                           </block>
                         </value>
                         <value name="STARTY">
-                          <block type="math_number" id="277">
+                          <block type="math_number" id="18">
                             <field name="NUM">10</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_drawnumber" id="286" inline="true">
+                          <block type="oled_drawnumber" id="19" inline="true">
                             <value name="NUMBER">
-                              <block type="sensor_object" id="293">
+                              <block type="sensor_object" id="20">
                                 <field name="OBJECT">RIGHTSIDE</field>
                               </block>
                             </value>
                             <next>
-                              <block type="controls_if" id="441" inline="false">
+                              <block type="controls_if" id="21" inline="false">
                                 <mutation elseif="1" else="1"></mutation>
                                 <value name="IF0">
-                                  <block type="logic_compare" id="455" inline="true">
+                                  <block type="logic_compare" id="22" inline="true">
                                     <field name="OP">LT</field>
                                     <value name="A">
-                                      <block type="sensor_object" id="514">
+                                      <block type="sensor_object" id="23">
                                         <field name="OBJECT">RIGHTSIDE</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="math_number" id="536">
+                                      <block type="math_number" id="24">
                                         <field name="NUM">35</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <statement name="DO0">
-                                  <block type="movement_left" id="568"></block>
+                                  <block type="movement_left" id="25"></block>
                                 </statement>
                                 <value name="IF1">
-                                  <block type="logic_compare" id="665" inline="true">
+                                  <block type="logic_compare" id="26" inline="true">
                                     <field name="OP">GT</field>
                                     <value name="A">
-                                      <block type="sensor_object" id="651">
+                                      <block type="sensor_object" id="27">
                                         <field name="OBJECT">RIGHTSIDE</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="math_number" id="658">
+                                      <block type="math_number" id="28">
                                         <field name="NUM">65</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <statement name="DO1">
-                                  <block type="movement_right" id="688"></block>
+                                  <block type="movement_right" id="29"></block>
                                 </statement>
                                 <statement name="ELSE">
-                                  <block type="movement_forward" id="698"></block>
+                                  <block type="movement_forward" id="30"></block>
                                 </statement>
                                 <next>
-                                  <block type="robot_delay" id="305" inline="true">
+                                  <block type="robot_delay" id="31" inline="true">
                                     <value name="DELAY">
-                                      <block type="math_number" id="312">
+                                      <block type="math_number" id="32">
                                         <field name="NUM">100</field>
                                       </block>
                                     </value>
@@ -144,7 +144,7 @@
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="329"></block>
+      <block type="movement_stop" id="33"></block>
     </next>
   </block>
 </xml>
